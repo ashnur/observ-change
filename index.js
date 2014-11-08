@@ -1,0 +1,36 @@
+module.exports = Change
+
+function Change(value) {
+    var listeners = []
+    value = value === undefined ? null : value
+
+    observable.set = function (v) {
+      if ( v !== value ) {
+        value = v
+
+        for (var i = 0, len = listeners.length; i < len; i++) {
+            listeners[i](v)
+        }
+      }
+    }
+
+    return observable
+
+    function observable(listener) {
+        if (!listener) {
+            return value
+        }
+
+        listeners.push(listener)
+
+        return function remove() {
+            for (var i = 0, len = listeners.length; i < len; i++) {
+                if (listeners[i] === listener) {
+                    listeners.splice(i, 1)
+                    break
+                }
+            }
+        }
+    }
+}
+

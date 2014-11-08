@@ -1,0 +1,29 @@
+{
+  "name": "observ-change",
+  "version": "0.0.1",
+  "description": "An observable which only triggers on change",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ashnur/observ-change.git"
+  },
+  "keywords": [
+    "observ",
+    "observable",
+    "change",
+    "mercury"
+  ],
+  "author": "ashnur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashnur/observ-change/issues"
+  },
+  "homepage": "https://github.com/ashnur/observ-change",
+  "devDependencies": {
+    "tape": "^3.0.1"
+  },
+  "dependencies": {}
+}
